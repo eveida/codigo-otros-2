@@ -1,3 +1,5 @@
+// >>>> Calificación Eveida: 3/5
+
 var formulario = document.querySelector(".formulario");
 formulario.onsubmit = function(e) {
   // Prevenir la recarga de la página al enviar el formulario
