@@ -1,4 +1,5 @@
-// >>>> Calificación Eveida: 3/5
+// >>>> Calificación Rocío: 5/5
+// >>>> Calificación David Romero: 5/5
 
 var formulario = document.querySelector(".formulario");
 formulario.onsubmit = function(e) {
