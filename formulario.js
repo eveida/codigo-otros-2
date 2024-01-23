@@ -52,6 +52,8 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
+//No aparece en la página
+
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
