@@ -1,3 +1,4 @@
+// Obtener el formulario y asignar una función al evento submit
 var formulario = document.querySelector(".formulario");
 formulario.onsubmit = function(e) {
   // Prevenir la recarga de la página al enviar el formulario
@@ -34,23 +35,21 @@ formulario.onsubmit = function(e) {
 };
 
 
+
 // Función para agregar invitado a la lista
 function agregarInvitado(nombre, edad, nacionalidad) {
-  if (nacionalidad === "ar") {
-    nacionalidad = "Argentina"
-  }
-  else if (nacionalidad === "mx") {
-    nacionalidad = "Mexicana"
-  }
-  else if (nacionalidad === "vnzl") {
-    nacionalidad = "Venezolana"
-  }
-  else if (nacionalidad === "per") {
-    nacionalidad = "Peruana"
-  }
+  // Mapear códigos de nacionalidad a nombres de países
+  var nacionalidadMap = {
+    ar: "Argentina",
+    mx: "Mexicana",
+    vnzl: "Venezolana",
+    per: "Peruana"
+  };
 
+  // Crear contenedor de lista de invitados
   var lista = document.getElementById("lista-de-invitados");
 
+  // Crear elemento de lista
   var elementoLista = document.createElement("div");
   elementoLista.classList.add("elemento-lista");
   lista.appendChild(elementoLista);
@@ -80,7 +79,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
   elementoLista.appendChild(corteLinea);
   elementoLista.appendChild(botonBorrar);
 
-
+  // Asignar función al botón para eliminar el invitado actual
   botonBorrar.onclick = function() {
     elementoLista.remove();
   };
